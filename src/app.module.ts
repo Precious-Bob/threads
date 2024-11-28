@@ -9,7 +9,6 @@ import { CommentsModule } from './comments/comments.module';
 @Module({
   imports: [
     UsersModule,
-
     ConfigModule.forRoot({
       isGlobal: true,
       cache: true,

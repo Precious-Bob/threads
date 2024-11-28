@@ -23,10 +23,10 @@ export class CommentEntity {
   @ManyToOne(() => CommentEntity, (comment) => comment.children, {
     nullable: true,
   })
-  parent: Comment | null;
+  parent: CommentEntity | null;
 
   @OneToMany(() => CommentEntity, (comment) => comment.parent)
-  children: Comment[];
+  children: CommentEntity[];
 
   @CreateDateColumn()
   createdAt: Date;
